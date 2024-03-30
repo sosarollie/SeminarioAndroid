@@ -1,0 +1,33 @@
+4) Describir qué representa una Activity
+ -	Una activity representa una pantalla de una aplicación, cada vez que pasamos a otra pantalla suponemos que estamos pasando a otra activity.
+ 
+ 5) Abrir el archivo AndroidManifest.xml. ¿Por qué MainActivity tiene un intent-filter con action MAIN y
+category LAUNCHER?
+ - El intent-filter con action MAIN especifica que ese será nuestro punto de entrada a la aplicación y que no espera ningun tipo de información del intent.
+ - El category LAUNCHER indica que el ícono de la actividad debe ser usado como icono del launcher de la aplicación.
+ 
+ 9) ¿Qué significa this en el código del ejercicio anterior?
+ - THIS refiere a la actividad MAIN.
+ 
+ 10) ¿Lo que utilizamos fue un intent implícito o explícito? ¿Cual es la diferencia entre ambos?
+ - Lo que utilizamos fue un intent explicito, donde especificamos a que activity queremos enviarle el mensaje, en cambio, si usaramos un intent implícito, dejariamos que el SO elija que aplicación/activity usar de las disponibles.
+ 
+ 15) Describa cuales son los estados por los que puede pasar una actividad
+ - Una actividad puede pasar por distintos estados: created, paused, stopped, resumed o destroyed.
+ 
+ 16) Describa cuales son los eventos generados a partir de un cambio de estado de una actividad
+ -  created --> onCreate();
+	paused --> onPause();
+	stopped --> onStop();
+	resumed --> onResume();
+	destroyed --> onDestroy();
+
+18) Genere una nueva aplicación con una actividad vacía en Android Studio. Edite el
+archivo AndroidManifest.xml y elimine las siguientes líneas:
+<intent-filter>
+<action android:name="android.intent.action.MAIN" />
+<category android:name="android.intent.category.LAUNCHER" />
+</intent-filter>
+a) ¿Qué error se produce en el entorno de desarrollo?. ¿Cuál es el motivo del error?
+
+ - a) Error running 'app', Default activity not found. No tenemos punto de entrada a la aplicacion
